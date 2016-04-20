@@ -8,9 +8,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created by qhuydtvt on 4/19/2016.
- */
 public class GameWindow extends Frame implements Runnable {
 
     BufferedImage imgBackground;
@@ -149,12 +146,6 @@ public class GameWindow extends Frame implements Runnable {
 
         g.drawImage(backBufferImage, 0, 0, null);
     }
-
-//    @Override
-//    public void paint(Graphics g) {
-//        g.drawImage(imgBackground, 10, 10, null); /* Background drawing */
-//        g.drawImage(imgPlane, planeX, planeY, null); /* Coordinates explanation */
-//    }
 
     @Override
     public void run() {
