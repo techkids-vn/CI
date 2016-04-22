@@ -1,37 +1,33 @@
-import javax.imageio.ImageIO;
+import javax.rmi.CORBA.Util;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.awt.event.*;
 
 public class GameWindow extends Frame implements Runnable {
 
-    BufferedImage imgBackground;
-    BufferedImage imgPlane;
-    int planeX, planeY;
-    int dx, dy;
+    Image imgBackground;
+
     Thread thread;
     Image backBufferImage;
 
-    public GameWindow(){
+    PlaneViewController planeViewController1;
+    PlaneViewController planeViewController2;
+
+    public GameWindow() {
         this.setSize(410, 610);
-        planeX = 200 - 35;
-        planeY = 600 - 62;
-        dx = 0;
-        dy = 0;
+
+        planeViewController1 = new PlaneViewController(
+                new Plane(100, 100, 70, 60),
+                Utils.loadImage("resources/PLANE4.png")
+        );
+
+        planeViewController2 = new PlaneViewController(
+            new Plane(200, 200, 70, 60),
+                Utils.loadImage("resources/PLANE3.png")
+        );
 
         this.setVisible(true);
 
-        try {
-            imgBackground = ImageIO.read(new File("resources/Background.png"));
-            imgPlane = ImageIO.read(new File("resources/PLANE4.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        imgBackground = Utils.loadImage("resources/Background.png");
 
         this.addWindowListener(new WindowListener() {
             @Override
@@ -79,21 +75,17 @@ public class GameWindow extends Frame implements Runnable {
             @Override
             public void keyPressed(KeyEvent e) {
                 switch (e.getKeyCode()) {
-                    case KeyEvent.VK_LEFT:
-                        dx = -5;
-                        System.out.println("Go Left");
-                        break;
-                    case KeyEvent.VK_RIGHT:
-                        dx = 5;
-                        System.out.println("Go right");
-                        break;
                     case KeyEvent.VK_UP:
-                        dy = -5;
-                        System.out.println("Go up");
+                        planeViewController1.up();
                         break;
                     case KeyEvent.VK_DOWN:
-                        dy = 5;
-                        System.out.println("Go down");
+                        planeViewController1.down();
+                        break;
+                    case KeyEvent.VK_LEFT:
+                        planeViewController1.left();
+                        break;
+                    case KeyEvent.VK_RIGHT:
+                        planeViewController1.right();
                         break;
                     default:
                         break;
@@ -103,29 +95,19 @@ public class GameWindow extends Frame implements Runnable {
             @Override
             public void keyReleased(KeyEvent e) {
                 switch (e.getKeyCode()) {
-                    case KeyEvent.VK_LEFT:
-                        dx = 0;
-                        System.out.println("Go Left");
-                        break;
-                    case KeyEvent.VK_RIGHT:
-                        dx = 0;
-                        System.out.println("Go right");
-                        break;
                     case KeyEvent.VK_UP:
-                        dy = 0;
-                        System.out.println("Go up");
-                        break;
                     case KeyEvent.VK_DOWN:
-                        dy = 0;
-                        System.out.println("Go down");
+                        planeViewController1.stopY();
+                        break;
+                    case KeyEvent.VK_LEFT:
+                    case KeyEvent.VK_RIGHT:
+                        planeViewController1.stopX();
                         break;
                     default:
                         break;
                 }
             }
         });
-
-        this.repaint();
     }
 
     public void startThread() {
@@ -135,14 +117,14 @@ public class GameWindow extends Frame implements Runnable {
 
     @Override
     public void update(Graphics g) {
-
         if(backBufferImage == null) {
             backBufferImage = createImage(getWidth(), getHeight());
         }
-        Graphics backbufferGraphics = backBufferImage.getGraphics();
+        Graphics backBufferGraphics = backBufferImage.getGraphics();
 
-        backbufferGraphics.drawImage(imgBackground, 10, 10, null); /* Background drawing */
-        backbufferGraphics.drawImage(imgPlane, planeX, planeY, null); /* Coordinates explanation */
+        backBufferGraphics.drawImage(imgBackground, 0, 0, null);
+        planeViewController1.paint(backBufferGraphics);
+        planeViewController2.paint(backBufferGraphics);
 
         g.drawImage(backBufferImage, 0, 0, null);
     }
@@ -152,13 +134,17 @@ public class GameWindow extends Frame implements Runnable {
         while(true) {
             try {
                 Thread.sleep(17);
-                planeX += dx;
-                planeY += dy;
+
+                Point point = MouseInfo.getPointerInfo().getLocation();
+                planeViewController2.moveTo(point);
+
+                planeViewController1.run();
+                planeViewController2.run();
                 repaint();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("Thread running");
         }
     }
+
 }
