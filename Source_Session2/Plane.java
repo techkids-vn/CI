@@ -2,14 +2,15 @@
 public class Plane {
     private int x;
     private int y;
-    private int width;
-    private int height;
 
-    public Plane(int x, int y, int width, int height) {
+    public Plane() {
+        x = 0;
+        y = 0;
+    }
+
+    public Plane(int x, int y) {
         this.x = x;
         this.y = y;
-        this.width = width;
-        this.height = height;
     }
 
     public int getX() {
@@ -19,10 +20,6 @@ public class Plane {
     public int getY() {
         return this.y;
     }
-
-    public int getWidth() { return width; }
-
-    public int getHeight() { return height; }
 
     public void move(Movement movement) {
         this.x += movement.dx;

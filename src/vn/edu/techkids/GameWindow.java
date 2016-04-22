@@ -1,6 +1,11 @@
-import javax.rmi.CORBA.Util;
+package vn.edu.techkids;
+
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.util.Vector;
 
 public class GameWindow extends Frame implements Runnable {
 
@@ -11,9 +16,12 @@ public class GameWindow extends Frame implements Runnable {
 
     PlaneViewController planeViewController1;
     PlaneViewController planeViewController2;
+    Vector<EnemyPlaneViewController> enemyPlaneViewControllers;
+
 
     public GameWindow() {
-        this.setSize(410, 610);
+
+        this.setSize(Screen.width, Screen.height);
 
         planeViewController1 = new PlaneViewController(
                 new Plane(100, 100, 70, 60),
@@ -23,6 +31,23 @@ public class GameWindow extends Frame implements Runnable {
         planeViewController2 = new PlaneViewController(
             new Plane(200, 200, 70, 60),
                 Utils.loadImage("resources/PLANE3.png")
+        );
+
+        enemyPlaneViewControllers = new Vector<EnemyPlaneViewController>(){
+        };
+
+        enemyPlaneViewControllers.add(
+                new EnemyPlaneViewController(
+                    new EnemyPlane(40, 40, 35, 30),
+                    Utils.loadImage("Resources/PLANE1.png")
+                )
+        );
+
+        enemyPlaneViewControllers.add(
+                new EnemyPlaneViewController(
+                        new EnemyPlane(70, 40, 35, 30),
+                        Utils.loadImage("Resources/PLANE1.png")
+                )
         );
 
         this.setVisible(true);
@@ -87,6 +112,9 @@ public class GameWindow extends Frame implements Runnable {
                     case KeyEvent.VK_RIGHT:
                         planeViewController1.right();
                         break;
+                    case KeyEvent.VK_SPACE:
+                        planeViewController1.shot();
+                        break;
                     default:
                         break;
                 }
@@ -122,9 +150,14 @@ public class GameWindow extends Frame implements Runnable {
         }
         Graphics backBufferGraphics = backBufferImage.getGraphics();
 
-        backBufferGraphics.drawImage(imgBackground, 0, 0, null);
+        backBufferGraphics.drawImage(imgBackground, 10, 10, null);
+
         planeViewController1.paint(backBufferGraphics);
         planeViewController2.paint(backBufferGraphics);
+
+        for(EnemyPlaneViewController enemyPlaneViewController : enemyPlaneViewControllers) {
+            enemyPlaneViewController.paint(backBufferGraphics);
+        }
 
         g.drawImage(backBufferImage, 0, 0, null);
     }
@@ -140,11 +173,16 @@ public class GameWindow extends Frame implements Runnable {
 
                 planeViewController1.run();
                 planeViewController2.run();
+
+                for(EnemyPlaneViewController enemyPlaneViewController : this.enemyPlaneViewControllers) {
+                    enemyPlaneViewController.run();
+                }
+
                 repaint();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println("Thread running");
         }
     }
-
 }

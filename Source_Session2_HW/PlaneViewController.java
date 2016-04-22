@@ -6,7 +6,6 @@ public class PlaneViewController {
     private Movement movement;
     private Image sprite;
     public int speed;
-    private BulletViewController bulletViewController;
 
     public PlaneViewController(Plane plane, Image sprite) {
         this.plane = plane;
@@ -15,13 +14,29 @@ public class PlaneViewController {
         this.speed = 5;
     }
 
-    public void shot() {
-        if(bulletViewController == null) {
-            bulletViewController = new BulletViewController(
-                    new Bullet(plane.getX() + 30, plane.getY()),
-                    Utils.loadImage("resources/DAN.png")
-            );
+    public Plane getPlane() {
+        return this.plane;
+    }
+
+    public void moveTo(Point point){
+        int destinationX = point.x - plane.getWidth()/2;
+        int destinationY = point.y - plane.getHeight()/2;
+
+        if(plane.getX() < destinationX - speed) {
+            movement.dx = speed;
         }
+        else if(plane.getX() > destinationX + speed) {
+            movement.dx = -speed;
+        }
+        else movement.dx = 0;
+
+        if(plane.getY() < destinationY - speed) {
+            movement.dy = speed;
+        }
+        else if(plane.getY() > destinationY + speed) {
+            movement.dy = -speed;
+        }
+        else movement.dy = 0;
     }
 
     public void left() {
@@ -50,18 +65,9 @@ public class PlaneViewController {
 
     public void run() {
         plane.move(movement);
-        if(bulletViewController != null) {
-            bulletViewController.run();
-            if(!bulletViewController.isAlive()) {
-                bulletViewController = null;
-            }
-        }
     }
 
     public void paint(Graphics g) {
-        g.drawImage(sprite, plane.getX(), plane.getY(), 70, 60, null);
-        if(bulletViewController != null) {
-            bulletViewController.paint(g);
-        }
+        g.drawImage(sprite, plane.getX(), plane.getY(), plane.getWidth(), plane.getHeight(), null);
     }
 }

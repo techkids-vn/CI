@@ -1,6 +1,9 @@
-import javax.rmi.CORBA.Util;
+
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public class GameWindow extends Frame implements Runnable {
 
@@ -13,15 +16,16 @@ public class GameWindow extends Frame implements Runnable {
     PlaneViewController planeViewController2;
 
     public GameWindow() {
-        this.setSize(410, 610);
+
+        this.setSize(Screen.width, Screen.height);
 
         planeViewController1 = new PlaneViewController(
-                new Plane(100, 100, 70, 60),
+                new Plane(100, 100),
                 Utils.loadImage("resources/PLANE4.png")
         );
 
         planeViewController2 = new PlaneViewController(
-            new Plane(200, 200, 70, 60),
+            new Plane(200, 200),
                 Utils.loadImage("resources/PLANE3.png")
         );
 
@@ -87,6 +91,9 @@ public class GameWindow extends Frame implements Runnable {
                     case KeyEvent.VK_RIGHT:
                         planeViewController1.right();
                         break;
+                    case KeyEvent.VK_SPACE:
+                        planeViewController1.shot();
+                        break;
                     default:
                         break;
                 }
@@ -122,9 +129,8 @@ public class GameWindow extends Frame implements Runnable {
         }
         Graphics backBufferGraphics = backBufferImage.getGraphics();
 
-        backBufferGraphics.drawImage(imgBackground, 0, 0, null);
+        backBufferGraphics.drawImage(imgBackground, 10, 10, null);
         planeViewController1.paint(backBufferGraphics);
-        planeViewController2.paint(backBufferGraphics);
 
         g.drawImage(backBufferImage, 0, 0, null);
     }
@@ -134,17 +140,12 @@ public class GameWindow extends Frame implements Runnable {
         while(true) {
             try {
                 Thread.sleep(17);
-
-                Point point = MouseInfo.getPointerInfo().getLocation();
-                planeViewController2.moveTo(point);
-
                 planeViewController1.run();
-                planeViewController2.run();
                 repaint();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println("Thread running");
         }
     }
-
 }
