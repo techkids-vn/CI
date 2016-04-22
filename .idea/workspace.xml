@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11c0f98f-d758-4523-a11b-4ec75020b4b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/._PLANE1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/._PLANE2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/._PLANE3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/._PLANE4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/DAN.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/PLANE1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/PLANE2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/PLANE3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/PLANE4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/Bullet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/BulletViewController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/EnemyPlane.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/EnemyPlaneViewController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/GameObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/GameVector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/GameWindow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/Plane.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/PlaneViewController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/Screen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/Utils.java" />
-      <change type="MOVED" beforePath="C:\Users\qhuydtvt\Documents\CI\Source_Session2_HW\Bullet.java" afterPath="$PROJECT_DIR$/Source_Session2/Bullet.java" />
-      <change type="MOVED" beforePath="C:\Users\qhuydtvt\Documents\CI\Source_Session2_HW\BulletViewController.java" afterPath="$PROJECT_DIR$/Source_Session2/BulletViewController.java" />
-      <change type="MOVED" beforePath="C:\Users\qhuydtvt\Documents\CI\Source_Session2_HW\Screen.java" afterPath="$PROJECT_DIR$/Source_Session2/Screen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source_Session2/GameWindow.java" afterPath="$PROJECT_DIR$/Source_Session2/GameWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source_Session2_HW/GameWindow.java" afterPath="$PROJECT_DIR$/Source_Session2_HW/GameWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source_Session2/Movement.java" afterPath="$PROJECT_DIR$/Source_Session2/Movement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source_Session2_HW/Movement.java" afterPath="$PROJECT_DIR$/Source_Session2_HW/Movement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source_Session2/Plane.java" afterPath="$PROJECT_DIR$/Source_Session2/Plane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source_Session2_HW/Plane.java" afterPath="$PROJECT_DIR$/Source_Session2_HW/Plane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source_Session2/PlaneViewController.java" afterPath="$PROJECT_DIR$/Source_Session2/PlaneViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source_Session2_HW/PlaneViewController.java" afterPath="$PROJECT_DIR$/Source_Session2_HW/PlaneViewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vn/edu/techkids/GameWindow.java" afterPath="$PROJECT_DIR$/src/vn/edu/techkids/GameWindow.java" />
     </list>
     <ignored path="CI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,52 +28,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PlaneViewController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlaneViewController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/vn/edu/techkids/PlaneViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1015" max-vertical-offset="1740">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.47058824" vertical-offset="600" max-vertical-offset="1740">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnemyPlane.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vn/edu/techkids/EnemyPlane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-              <folding>
-                <element signature="e#175#176#0" expanded="true" />
-                <element signature="e#217#218#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnemyPlaneViewController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/vn/edu/techkids/EnemyPlaneViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33252427" vertical-offset="43" max-vertical-offset="660">
-              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-              <folding>
-                <element signature="e#603#604#0" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vn/edu/techkids/GameWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1660" max-vertical-offset="2180">
-              <caret line="177" column="46" selection-start-line="177" selection-start-column="46" selection-end-line="177" selection-end-column="46" />
-              <folding>
-                <element signature="class#1603:2322" expanded="false" />
-                <element signature="class#2358:3855" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -125,8 +54,8 @@
         <option value="$PROJECT_DIR$/src/vn/edu/techkids/Bullet.java" />
         <option value="$PROJECT_DIR$/src/vn/edu/techkids/EnemyPlane.java" />
         <option value="$PROJECT_DIR$/src/vn/edu/techkids/PlaneViewController.java" />
-        <option value="$PROJECT_DIR$/src/vn/edu/techkids/GameWindow.java" />
         <option value="$PROJECT_DIR$/src/vn/edu/techkids/EnemyPlaneViewController.java" />
+        <option value="$PROJECT_DIR$/src/vn/edu/techkids/GameWindow.java" />
       </list>
     </option>
   </component>
@@ -181,6 +110,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techkids" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -449,12 +396,12 @@
       <created>1461318327766</created>
       <option name="number" value="Default" />
       <updated>1461318327766</updated>
-      <workItem from="1461318330328" duration="2910000" />
+      <workItem from="1461318330328" duration="4005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2910000" />
+    <option name="totallyTimeSpent" value="4005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
@@ -474,7 +421,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32988167" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21088958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -620,9 +567,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/PLANE1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vn/edu/techkids/EnemyPlaneViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.019417476" vertical-offset="188" max-vertical-offset="660">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/vn/edu/techkids/EnemyPlane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+        <state vertical-scroll-proportion="0.28235295" vertical-offset="0" max-vertical-offset="425">
           <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
           <folding>
             <element signature="e#175#176#0" expanded="true" />
@@ -631,39 +594,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/PLANE1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/vn/edu/techkids/GameWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32941177" vertical-offset="1380" max-vertical-offset="3080">
+          <caret line="116" column="46" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
+          <folding>
+            <element signature="class#1465:2184" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vn/edu/techkids/PlaneViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1015" max-vertical-offset="1740">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.47058824" vertical-offset="600" max-vertical-offset="1740">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vn/edu/techkids/GameWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1660" max-vertical-offset="2180">
-          <caret line="177" column="46" selection-start-line="177" selection-start-column="46" selection-end-line="177" selection-end-column="46" />
-          <folding>
-            <element signature="class#1603:2322" expanded="false" />
-            <element signature="class#2358:3855" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vn/edu/techkids/EnemyPlaneViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33252427" vertical-offset="43" max-vertical-offset="660">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="e#603#604#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
           </folding>
         </state>
       </provider>

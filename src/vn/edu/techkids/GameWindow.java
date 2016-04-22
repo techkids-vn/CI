@@ -16,6 +16,7 @@ public class GameWindow extends Frame implements Runnable {
 
     PlaneViewController planeViewController1;
     PlaneViewController planeViewController2;
+
     Vector<EnemyPlaneViewController> enemyPlaneViewControllers;
 
 
@@ -36,19 +37,16 @@ public class GameWindow extends Frame implements Runnable {
         enemyPlaneViewControllers = new Vector<EnemyPlaneViewController>(){
         };
 
-        enemyPlaneViewControllers.add(
-                new EnemyPlaneViewController(
-                    new EnemyPlane(40, 40, 35, 30),
-                    Utils.loadImage("Resources/PLANE1.png")
-                )
-        );
+        for(int x = 40; x < Screen.width; x += 60) {
+            enemyPlaneViewControllers.add(
+                    new EnemyPlaneViewController(
+                            new EnemyPlane(x, 40, 35, 30),
+                            Utils.loadImage("Resources/PLANE1.png")
+                    )
+            );
+        }
 
-        enemyPlaneViewControllers.add(
-                new EnemyPlaneViewController(
-                        new EnemyPlane(70, 40, 35, 30),
-                        Utils.loadImage("Resources/PLANE1.png")
-                )
-        );
+
 
         this.setVisible(true);
 
@@ -114,6 +112,9 @@ public class GameWindow extends Frame implements Runnable {
                         break;
                     case KeyEvent.VK_SPACE:
                         planeViewController1.shot();
+                        break;
+                    case KeyEvent.VK_ENTER:
+                        planeViewController2.shot();
                         break;
                     default:
                         break;
